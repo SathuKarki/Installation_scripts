@@ -1,0 +1,11 @@
+sudo apt update
+sudo apt install docker.io -y
+sudo systemctl enable docker --now
+docker --version
+#sudo usermod -aG docker ubuntu
+getent group docker   #helps in knowing whether current add user assigned to docker group or not:
+newgrp docker  #Refresh the group permission to use updated one 
+sudo service docker restart
+docker ps
+sudo service docker restart
+docker ps
